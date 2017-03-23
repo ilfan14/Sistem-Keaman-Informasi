@@ -1,8 +1,8 @@
-program Project1;
+program project_biometriks;
 
 uses
   Vcl.Forms,
-  Unit1 in 'Unit1.pas' {Form1};
+  unit_biometriks in 'unit_biometriks.pas' {Form1};
 
 {$R *.res}
 

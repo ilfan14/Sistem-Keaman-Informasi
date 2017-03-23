@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 344
-  ClientWidth = 715
+  ClientHeight = 392
+  ClientWidth = 764
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,13 +11,14 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesigned
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
     Left = 8
     Top = 8
-    Width = 100
-    Height = 100
+    Width = 97
+    Height = 97
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D49484452000000640000
       00640802000000FF800203000000097048597300002E2300002E230178A53F76
@@ -551,8 +552,8 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object Memo1: TMemo
-    Left = 514
-    Top = 8
+    Left = 594
+    Top = 152
     Width = 185
     Height = 89
     Lines.Strings = (
@@ -560,14 +561,78 @@ object Form1: TForm1
     TabOrder = 1
   end
   object Chart1: TChart
-    Left = 114
-    Top = 48
+    Left = 137
+    Top = 8
     Width = 400
     Height = 250
     Title.Text.Strings = (
-      'TChart')
+      'Hisogram')
+    View3D = False
     TabOrder = 2
     DefaultCanvas = 'TGDIPlusCanvas'
     ColorPaletteIndex = 13
+    object Series1: TLineSeries
+      SeriesColor = clRed
+      Title = 'Red'
+      Brush.BackColor = clDefault
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Series2: TLineSeries
+      SeriesColor = 4259584
+      Title = 'Green'
+      Brush.BackColor = clDefault
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Series3: TLineSeries
+      SeriesColor = clBlue
+      Title = 'Blue'
+      Brush.BackColor = clDefault
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+  end
+  object BitBtn1: TBitBtn
+    Left = 8
+    Top = 311
+    Width = 121
+    Height = 25
+    Caption = 'Searching Image'
+    Kind = bkRetry
+    NumGlyphs = 2
+    TabOrder = 3
+    OnClick = BitBtn1Click
+  end
+  object BitBtn2: TBitBtn
+    Left = 137
+    Top = 311
+    Width = 120
+    Height = 25
+    Caption = 'Display Histogram'
+    Kind = bkIgnore
+    NumGlyphs = 2
+    TabOrder = 4
+    OnClick = BitBtn2Click
+  end
+  object SeriesDataSet1: TSeriesDataSet
+    Left = 712
+    Top = 24
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    Left = 8
+    Top = 136
   end
 end
